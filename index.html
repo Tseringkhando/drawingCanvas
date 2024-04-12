@@ -1,0 +1,127 @@
+<!-- Updated by  : Tsering Khando Lama c0916140 -->
+<html>
+<!-- using the Index.html given template -->
+<head>
+  <title>Drawing App</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="icon" href="pencil.png" type="image/x-icon">
+  <style type="text/css">
+    #pink {
+      background-color: #F50057;
+      border-color: #F50057;
+    }
+
+    #blue {
+      background-color: #2979FF;
+      border-color: #2979FF;
+    }
+
+    #yellow {
+      background-color: #FFD600;
+      border-color: #FFD600;
+    }
+
+    #black {
+      background-color: #000000;
+      border-color: #000000;
+    }
+
+    i.white {
+      color: white;
+    }
+
+    div#controls {
+      width: 960px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+
+    div#drawingArea {
+      width: 960px;
+      margin: 0 auto;
+
+    }
+
+    /*
+   adding color changing animation for h1 */
+    @keyframes colorChange {
+      0% {
+        color: rgb(224, 186, 33);
+      }
+
+      25% {
+        color: rgb(53, 158, 200);
+      }
+
+      50% {
+        color: rgb(45, 88, 45);
+      }
+
+      75% {
+        color: rgba(109, 9, 9, 0.781);
+      }
+
+      100% {
+        color: rgb(16, 16, 16);
+      }
+    }
+
+    h1 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 34px;
+      text-align: center;
+      margin-top: 60px;
+      animation: colorChange 2s infinite;
+    }
+  </style>
+  <!-- style ends -->
+</head> <!-- head ends here -->
+<!-- body starts -->
+
+<body>
+  <h1> Let's Paint! </h1>
+  <div id="drawingArea">
+    <canvas id="main" width="960" height="500" style="border:1px solid #ccc;">
+      <!-- drawing canvas -->
+    </canvas>
+  </div>
+
+  <div id="controls">
+    <button id="new" class="btn btn-action">
+      <i class="far fa-file"></i>
+    </button>
+
+    <button id="erase" class="btn btn-action">
+      <i class="fas fa-eraser"></i>
+    </button>
+
+    <button id="black" class="btn btn-action">
+      <i class="fas fa-paint-brush white"></i>
+    </button>
+    <button id="pink" class="btn btn-action">
+      <i class="fas fa-paint-brush white"></i>
+    </button>
+    <button id="blue" class="btn btn-action">
+      <i class="fas fa-paint-brush white"></i>
+    </button>
+    <button id="yellow" class="btn btn-action">
+      <i class="fas fa-paint-brush white"></i>
+    </button>
+
+    <br>
+
+    Brush size:
+    <input id="slider" type="range" min="2" max="15" step="1" />
+    <span id="brushSize"></span>
+  </div>
+
+  <div id="log"></div>
+  <!-- js linked -->
+  <script src="script.js"></script>
+</body>
+
+</html>
